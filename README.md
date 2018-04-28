@@ -5,7 +5,6 @@
         ➜  docker run --rm redis-proxy
         
   # High level design 
-  
   ![alt text](https://github.com/EswaranMuthu/redis-proxy/blob/master/redis-Proxy-Architecture.png)
   1) Request for redis value from client.
   2) Request intercepted (using Spring AOP) by CacheService.
