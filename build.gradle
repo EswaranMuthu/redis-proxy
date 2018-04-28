@@ -1,0 +1,67 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.1.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.1.RELEASE")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+jar {
+	baseName = 'redis-proxy'
+}
+
+group = 'com.redis.proxy'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 9
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-cache')
+	compile('org.springframework.boot:spring-boot-starter-data-redis')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	// https://mvnrepository.com/artifact/org.aspectj/aspectjrt
+	compile('org.aspectj:aspectjrt')
+	compileOnly('org.projectlombok:lombok')
+
+
+	// testing framework
+	testCompile 'org.codehaus.groovy:groovy-all:2.4.14'
+	testCompile "org.springframework.boot:spring-boot-starter-test"
+	testCompile 'org.codehaus.groovy:groovy-all:2.4.14'
+	testCompile "org.springframework.boot:spring-boot-starter-test"
+
+	def spockVersion = '1.1-groovy-2.4'
+	testCompile "org.spockframework:spock-core:$spockVersion"
+	testCompile "org.spockframework:spock-spring:$spockVersion"
+	testCompile 'cglib:cglib-nodep:3.2.5' //needed for spock mocking/stubbing
+}
+
+tasks.withType(Test) {
+	maxHeapSize = "1g"
+	testLogging {
+		// causes failed tests to print the full message in the console, helpful for debugging
+		exceptionFormat "full"
+	}
+}
+
+sourceSets {
+	test {
+		resources {
+			srcDir "src/test/groovy"
+		}
+	}
+}
+

@@ -1,0 +1,8 @@
+spring:
+  redis:
+    host: 10.1.132.216
+    port: 6379
+    password: redis1
+    cache:
+      expiry: 30
+      capacity: 100
