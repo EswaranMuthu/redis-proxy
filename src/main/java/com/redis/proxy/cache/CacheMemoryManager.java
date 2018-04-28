@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.*;
  */
 public class CacheMemoryManager {
 
-    private HashMap<String, ValueObject> redisProxy;
+    private Map<String, ValueObject> redisProxy = new ConcurrentHashMap<String, ValueObject>();
     private Queue<String> queue = new ConcurrentLinkedQueue<String>();
     private final static CacheMemoryManager cacheMemoryManager = new CacheMemoryManager();
 
