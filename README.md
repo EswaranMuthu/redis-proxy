@@ -2,10 +2,11 @@
         ➜ ./gradlew bootRun
   # To start Application using Docker
         1) Execute from docker hub 
-          ->  docker run -p 8080:8080 eswaran/redis-proxy:1.0.0 
+          ➜ docker run -p 8080:8080 --rm eswaran/redis-proxy:1.0.0 
+               # or
         2) Execute from local
-       ➜ docker build -t redis-proxy .
-        ➜  docker run --rm -p 8080:8080 redis-proxy
+          ➜ docker build -t redis-proxy .
+          ➜ docker run --rm -p 8080:8080 redis-proxy
         
   # High level design 
   ![alt text](https://github.com/EswaranMuthu/redis-proxy/blob/master/redis-Proxy-Architecture.png)
