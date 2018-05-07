@@ -5,9 +5,8 @@
                ➜ docker run -p 8080:8080 --rm eswaran/redis-proxy:1.0.0
      ***************************************************************************************************************
           2) Execute from local
-               ➜ docker build -t redis-proxy .    
-               
-               ➜ docker run --rm -p 8080:8080 redis-proxy
+            ➜ docker build -t redis-proxy .    
+            ➜ docker run --rm -p 8080:8080 redis-proxy
           
     **************************************************************************************************************** 
       Docker cloud repo : https://cloud.docker.com/swarm/eswaran/repository/docker/eswaran/redis-proxy/general
