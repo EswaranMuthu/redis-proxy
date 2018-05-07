@@ -24,7 +24,7 @@ public class IdleObjectCollector {
         CacheMemoryManager cacheMemoryManager = CacheMemoryManager.cacheMemoryManagerFactory();
         cacheMemoryManager.removeIdleObjects(Long.parseLong(expiry));
 
-        log.info("Purging Pending Cart completed-cron-jobs-all-regions-" + System.currentTimeMillis() / 1000);
+        log.info("Purging idle record completed-cron-jobs-all-regions-" + System.currentTimeMillis() / 1000);
     }
 
 }
