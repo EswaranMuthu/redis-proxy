@@ -8,6 +8,7 @@
         2) Execute from local
           ➜ docker build -t redis-proxy .
           ➜ docker run --rm -p 8080:8080 redis-proxy
+ ****************************************************************************************************************         
 
 # High level design 
   ![alt text](https://github.com/EswaranMuthu/redis-proxy/blob/master/redis-Proxy-Architecture.png)
