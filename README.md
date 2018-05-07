@@ -3,7 +3,7 @@
   # To start Application using Docker
         1) Execute from docker hub 
           ➜ docker run -p 8080:8080 --rm eswaran/redis-proxy:1.0.0 
-               # or
+  #                  or
         2) Execute from local
           ➜ docker build -t redis-proxy .
           ➜ docker run --rm -p 8080:8080 redis-proxy
