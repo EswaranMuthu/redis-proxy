@@ -7,8 +7,8 @@
         2) Execute from local
           ➜ docker build -t redis-proxy .
           ➜ docker run --rm -p 8080:8080 redis-proxy
-  ********************************************************************      
-  # High level design 
+
+# High level design 
   ![alt text](https://github.com/EswaranMuthu/redis-proxy/blob/master/redis-Proxy-Architecture.png)
   1) Request for redis value from client.
   2) Request intercepted (using Spring AOP) by CacheService.
