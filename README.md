@@ -8,6 +8,8 @@
             * docker run --rm -p 8080:8080 redis-proxy
           
     Docker cloud repo : https://cloud.docker.com/swarm/eswaran/repository/docker/eswaran/redis-proxy/general
+    
+  Note : to point to dockerize redis server please ref: EswaranMuthu/dockerize-redis
 
 # High level design 
   ![alt text](https://github.com/EswaranMuthu/redis-proxy/blob/master/redis-Proxy-Architecture.png)
